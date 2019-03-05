@@ -24,7 +24,7 @@ var gulp = require('gulp'),
   browserSync = require('browser-sync').create(),
 
   reload = browserSync.reload,
-  src = './src'
+  src = './src',
   dist = './public',
   config = {
     htmlDest: dist,
@@ -102,14 +102,17 @@ gulp.task('clean', function(){
 
 /* Copy
 -------------------------------------------------------------------- */
-console.log(src + '**/.{html}');
 gulp.task('copy', function(){
   gulp.src([
-    config.imgPathSrc + '**/.{gif|jpg|png}',
+    config.imgPathSrc + '/**/*.{gif,jpg,png}',
+  ])
+    .pipe(copy())
+    .pipe(gulp.dest(config.imgPathDest));
+  gulp.src([
     src + '/*.html'
   ])
-  .pipe(copy())
-  .pipe(gulp.dest(dist));
+    .pipe(copy())
+    .pipe(gulp.dest(dist));
 });
 
 /**********************************************************************
