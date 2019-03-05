@@ -44,7 +44,7 @@ var gulp = require('gulp'),
 -------------------------------------------------------------------- */
 
 gulp.task('postcss', function () {
-  const plugins = [ atImport(), cssnext(), precss() ];
+  const plugins = [atImport(), cssnext(), precss()];
   if (process.env.ENVIRONMENT === 'production') {
     plugins.push(cssnano());
   }
@@ -52,7 +52,7 @@ gulp.task('postcss', function () {
     `${config.postcssPath}/*.postcss`,
     `!${config.postcssPath}/_*.postcss`,
   ]).pipe(postcss(plugins))
-    .pipe(dest(config.cssDest, {ext: '.css'}))
+    .pipe(dest(config.cssDest, { ext: '.css' }))
     .pipe(gulp.dest('./'));
 });
 
@@ -60,7 +60,7 @@ gulp.task('postcss', function () {
 -------------------------------------------------------------------- */
 
 gulp.task('pug', function buildHTML() {
-  return gulp.src([ `${src}/**/*.pug`, `!${src}/**/_*/*.pug` ])
+  return gulp.src([`${src}/**/*.pug`, `!${src}/**/_*/*.pug`])
     .pipe(pug({ pretty: process.env.ENVIRONMENT === 'production' }))
     .pipe(gulp.dest(config.htmlDest));
 });
@@ -68,19 +68,16 @@ gulp.task('pug', function buildHTML() {
 /* Bundle Assets
 -------------------------------------------------------------------- */
 
-gulp.task('vendors', function() {
+gulp.task('vendors', function () {
   return gulp.src(bundles.scripts)
     .pipe(concat('vendor.js'))
     .pipe(minify())
     .pipe(gulp.dest(config.jsPathDest));
 });
 
-gulp.task('scripts', function() {
-  const stream = gulp.src([
-    'node_modules/babel-polyfill/dist/polyfill.js',
-    config.jsPathSrc + '/main.js'
-  ])
-  .pipe(babel({ presets: ['@babel/env'] }));
+gulp.task('scripts', function () {
+  const stream = gulp.src(config.jsPathSrc + '/main.js');
+    // .pipe(babel({ presets: ['@babel/preset-env'] }));
   if (process.env.ENVIRONMENT === 'production') {
     return stream.pipe(uglify()).pipe(gulp.dest(config.jsPathDest));
   }
@@ -89,25 +86,26 @@ gulp.task('scripts', function() {
 /* Run a proxy server
 -------------------------------------------------------------------- */
 
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', function () {
   browserSync.init({ server: { baseDir: dist } });
 });
 
 /* Cleanup the Sass generated --sourcemap *.map.css files
 -------------------------------------------------------------------- */
 
-gulp.task('clean', function(){
-  gulp.src([`${dist}/assets`, `${dist}/*.html`], {read: false}).pipe(clean());
+gulp.task('clean', function () {
+  gulp.src([`${dist}/assets`, `${dist}/*.html`], { read: false }).pipe(clean());
 });
 
 /* Copy
 -------------------------------------------------------------------- */
-gulp.task('copy', function(){
+gulp.task('copy', function () {
   gulp.src([
     config.imgPathSrc + '/**/*.{gif,jpg,png}',
   ])
     .pipe(copy())
     .pipe(gulp.dest(config.imgPathDest));
+
   gulp.src([
     src + '/*.html'
   ])
@@ -119,7 +117,7 @@ gulp.task('copy', function(){
 4. Registered Gulp tasks
 **********************************************************************/
 
-gulp.task('build', ['clean'], function(){
+gulp.task('build', ['clean'], function () {
   gulp.start('pug');
   gulp.start('vendors');
   gulp.start('scripts');
@@ -127,7 +125,7 @@ gulp.task('build', ['clean'], function(){
   gulp.start('copy');
 });
 
-gulp.task('serve', ['build', 'browser-sync'], function(){
+gulp.task('serve', ['build', 'browser-sync'], function () {
   gulp.watch(dist + '/*.html').on('change', reload);
   gulp.watch(config.cssDest + '/*.css').on('change', reload);
   gulp.watch(config.jsPathSrc + '/*.js').on('change', reload);
