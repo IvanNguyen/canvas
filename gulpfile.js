@@ -76,8 +76,8 @@ gulp.task('vendors', function () {
 });
 
 gulp.task('scripts', function () {
-  const stream = gulp.src(config.jsPathSrc + '/main.js');
-    // .pipe(babel({ presets: ['@babel/preset-env'] }));
+  const stream = gulp.src(config.jsPathSrc + '/main.js')
+    .pipe(babel({ presets: ['@babel/env'] }));
   if (process.env.ENVIRONMENT === 'production') {
     return stream.pipe(uglify()).pipe(gulp.dest(config.jsPathDest));
   }

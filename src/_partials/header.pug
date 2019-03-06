@@ -1,35 +1,519 @@
 header
-
-  ul.dropdown
-    li#dropdownMenu2.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-      | Dropdown
-    ul.dropdown-menu(aria-labelledby='dropdownMenu2')
-      li.dropdown-item(type='button') Action
-      li.dropdown-item(type='button') Another action
-      li#dropdownMenu3.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') asdfjklhasdf
-        //- a#dropdownMenu3.btn.btn-secondary.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-        //-   | Something else here
-        ul.dropdown-menu(aria-labelledby='dropdownMenu3')
-          li.dropdown-item(type='button') Action sub
-          li.dropdown-item(type='button') Another action sbu
-          li.dropdown-item(type='button') Another action sbu
-   
-  nav.navbar.navbar-expand-lg.navbar-light.bg-light
-    
-    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarTogglerDemo02', aria-controls='navbarTogglerDemo02', aria-expanded='false', aria-label='Toggle navigation')
-      span.navbar-toggler-icon
-    a.navbar-brand(href='#') Navbar
-    a search-cart
-    #navbarTogglerDemo02.collapse.navbar-collapse
-      ul.navbar-nav.mr-auto.mt-2.mt-lg-0
-        li.nav-item.active
-          a.nav-link(href='#')
-            | Home 
-            span.sr-only (current)
-        li.nav-item
-          a.nav-link(href='#') Link
-        li.nav-item
-          a.nav-link.disabled(href='#', tabindex='-1', aria-disabled='true') Disabled
-      form.form-inline.my-2.my-lg-0
-        input.form-control.mr-sm-2(type='search', placeholder='Search')
-        button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Search
+  .header-wrapper
+    .container.header-container
+      //- menu-trigger-button
+      a#menu-trigger-button
+        i.fas.fa-align-justify
+      //- logo
+      #logo
+        a(class="black-logo" href="index.html")
+          img(src="assets/img/black-logo.png", alt="black-logo")
+        a(class="white-logo" href="index.html")
+          img(src="assets/img/white-logo.png", alt="white-logo")  
+      //- header-menu
+      .nav-wrapper
+        nav#header-menu
+          ul
+            li
+              a(href='#') Home
+              ul(style={display:'none'})
+                li
+                  a(href='#') Home - Corporate
+                  ul
+                    li
+                      a(href='#')
+                        Corporate - Layout 1
+                    li
+                      a(href='#')
+                        Corporate - Layout 2
+                    li
+                      a(href='#')
+                        Corporate - Layout 3
+                    li
+                      a(href='#')
+                        Corporate - Layout 4
+                li
+                  a(href="#") Home - Blog
+                li
+                  a(href="#") Home - Portfolio
+                li
+                  a(href='#') Home - Fullscreen
+                  ul
+                    li
+                      a(href='#') 
+                        Fullscreen - Layout 1
+                    li
+                      a(href='#')
+                        Fullscreen - Layout 2
+                    li
+                      a(href='#')
+                        Fullscreen - Layout 3
+                    li
+                      a(href='#')
+                        Fullscreen - Layout 4
+                li
+                  a(href="#") Home - Event
+                li
+                  a(href="#") Home - Wedding 
+                li
+                  a(href="#") Home - Party
+            li
+              a(href='#') Features
+              ul(style={display:'none'})
+                li
+                  a(href='#') Home - Corporate
+                  ul
+                    li
+                      a(href='#')
+                        Corporate - Layout 1
+                    li
+                      a(href='#')
+                        Corporate - Layout 2
+                    li
+                      a(href='#')
+                        Corporate - Layout 3
+                    li
+                      a(href='#')
+                        Corporate - Layout 4
+                li
+                  a(href="#") Home - Blog
+                li
+                  a(href="#") Home - Portfolio
+                li
+                  a(href='#') Home - Fullscreen
+                  ul
+                    li
+                      a(href='#') 
+                        Fullscreen - Layout 1
+                    li
+                      a(href='#')
+                        Fullscreen - Layout 2
+                      ul
+                        li
+                          a(href='#')
+                            Corporate - Layout 2.1
+                        li
+                          a(href='#')
+                            Corporate - Layout 2.2
+                        li
+                          a(href='#')
+                            Corporate - Layout 2.3
+                        li
+                          a(href='#')
+                            Corporate - Layout 2.4
+                    li
+                      a(href='#')
+                        Fullscreen - Layout 3
+                    li
+                      a(href='#')
+                        Fullscreen - Layout 4
+                li
+                  a(href="#") Home - Event
+                li
+                  a(href="#") Home - Wedding 
+                li
+                  a(href="#") Home - Party
+            li.mega-menu
+              a(href="#") Pages
+              .mega-menu__content(style={display:'none'})
+                ul.mega-menu__column.col-lg-3
+                  li.mega-menu__title
+                    a(href='#')
+                      div Introduction
+                    ul
+                      li
+                        a(href='about.html')
+                          div About Us
+                      li
+                        a(href='about-2.html')
+                          div About Us - Layout 2
+                      li
+                        a(href='about-me.html')
+                          div About Me
+                      li
+                        a(href='team.html')
+                          div Team Members
+                      li
+                        a(href='jobs.html')
+                          div Careers
+                      li
+                        a(href='side-navigation.html')
+                          div Side Navigation
+                      li
+                        a(href='page-submenu.html')
+                          div Page Submenu
+                      li
+                        a(href='sitemap.html')
+                          div Sitemap
+                ul.mega-menu__column.col-lg-3
+                  li.mega-menu__title
+                    a(href='#')
+                      div Utility
+                    ul
+                      li
+                        a(href='about.html')
+                          div About Us
+                      li
+                        a(href='about-2.html')
+                          div About Us - Layout 2
+                      li
+                        a(href='about-me.html')
+                          div About Me
+                      li
+                        a(href='team.html')
+                          div Team Members
+                      li
+                        a(href='jobs.html')
+                          div Careers
+                      li
+                        a(href='side-navigation.html')
+                          div Side Navigation
+                      li
+                        a(href='page-submenu.html')
+                          div Page Submenu
+                      li
+                        a(href='sitemap.html')
+                          div Sitemap
+                ul.mega-menu__column.col-lg-3
+                  li.mega-menu__title
+                    a(href='#')
+                      div Layout Grids
+                    ul
+                      li
+                        a(href='about.html')
+                          div About Us
+                      li
+                        a(href='about-2.html')
+                          div About Us - Layout 2
+                      li
+                        a(href='about-me.html')
+                          div About Me
+                      li
+                        a(href='team.html')
+                          div Team Members
+                      li
+                        a(href='jobs.html')
+                          div Careers
+                      li
+                        a(href='side-navigation.html')
+                          div Side Navigation
+                      li
+                        a(href='page-submenu.html')
+                          div Page Submenu
+                      li
+                        a(href='sitemap.html')
+                          div Sitemap
+                ul.mega-menu__column.col-lg-3
+                  li.mega-menu__title
+                    a(href='#')
+                      div Miscellaneous
+                    ul
+                      li
+                        a(href='about.html')
+                          div About Us
+                      li
+                        a(href='about-2.html')
+                          div About Us - Layout 2
+                      li
+                        a(href='about-me.html')
+                          div About Me
+                      li
+                        a(href='team.html')
+                          div Team Members
+                      li
+                        a(href='jobs.html')
+                          div Careers
+                      li
+                        a(href='side-navigation.html')
+                          div Side Navigation
+                      li
+                        a(href='page-submenu.html')
+                          div Page Submenu
+                      li
+                        a(href='sitemap.html')
+                          div Sitemap
+            li.mega-menu
+              a(href="#") Portfolio
+              .mega-menu__content(style={display:'none'})
+                ul.mega-menu__column.col-lg-3
+                  li.mega-menu__title
+                    a(href='#')
+                      div Introduction
+                    ul
+                      li
+                        a(href='about.html')
+                          div About Us
+                      li
+                        a(href='about-2.html')
+                          div About Us - Layout 2
+                      li
+                        a(href='about-me.html')
+                          div About Me
+                      li
+                        a(href='team.html')
+                          div Team Members
+                      li
+                        a(href='jobs.html')
+                          div Careers
+                      li
+                        a(href='side-navigation.html')
+                          div Side Navigation
+                      li
+                        a(href='page-submenu.html')
+                          div Page Submenu
+                      li
+                        a(href='sitemap.html')
+                          div Sitemap
+                ul.mega-menu__column.col-lg-3
+                  li.mega-menu__title
+                    a(href='#')
+                      div Utility
+                    ul
+                      li
+                        a(href='about.html')
+                          div About Us
+                      li
+                        a(href='about-2.html')
+                          div About Us - Layout 2
+                      li
+                        a(href='about-me.html')
+                          div About Me
+                      li
+                        a(href='team.html')
+                          div Team Members
+                      li
+                        a(href='jobs.html')
+                          div Careers
+                      li
+                        a(href='side-navigation.html')
+                          div Side Navigation
+                      li
+                        a(href='page-submenu.html')
+                          div Page Submenu
+                      li
+                        a(href='sitemap.html')
+                          div Sitemap
+                ul.mega-menu__column.col-lg-3
+                  li.mega-menu__title
+                    a(href='#')
+                      div Layout Grids
+                    ul
+                      li
+                        a(href='about.html')
+                          div About Us
+                      li
+                        a(href='about-2.html')
+                          div About Us - Layout 2
+                      li
+                        a(href='about-me.html')
+                          div About Me
+                      li
+                        a(href='team.html')
+                          div Team Members
+                      li
+                        a(href='jobs.html')
+                          div Careers
+                      li
+                        a(href='side-navigation.html')
+                          div Side Navigation
+                      li
+                        a(href='page-submenu.html')
+                          div Page Submenu
+                      li
+                        a(href='sitemap.html')
+                          div Sitemap
+                ul.mega-menu__column.col-lg-3
+                  li.mega-menu__title
+                    a(href='#')
+                      div Miscellaneous
+                    ul
+                      li
+                        a(href='about.html')
+                          div About Us
+                      li
+                        a(href='about-2.html')
+                          div About Us - Layout 2
+                      li
+                        a(href='about-me.html')
+                          div About Me
+                      li
+                        a(href='team.html')
+                          div Team Members
+                      li
+                        a(href='jobs.html')
+                          div Careers
+                      li
+                        a(href='side-navigation.html')
+                          div Side Navigation
+                      li
+                        a(href='page-submenu.html')
+                          div Page Submenu
+                      li
+                        a(href='sitemap.html')
+                          div Sitemap
+            li.mega-menu
+              a(href="#") Blog
+              .mega-menu__content(style={display:'none'})
+                ul.mega-menu__column.col-lg-3
+                  li.mega-menu__title
+                    a(href='#')
+                      div Introduction
+                    ul
+                      li
+                        a(href='about.html')
+                          div About Us
+                      li
+                        a(href='about-2.html')
+                          div About Us - Layout 2
+                      li
+                        a(href='about-me.html')
+                          div About Me
+                      li
+                        a(href='team.html')
+                          div Team Members
+                      li
+                        a(href='jobs.html')
+                          div Careers
+                      li
+                        a(href='side-navigation.html')
+                          div Side Navigation
+                      li
+                        a(href='page-submenu.html')
+                          div Page Submenu
+                      li
+                        a(href='sitemap.html')
+                          div Sitemap
+                ul.mega-menu__column.col-lg-3
+                  li.mega-menu__title
+                    a(href='#')
+                      div Utility
+                    ul
+                      li
+                        a(href='about.html')
+                          div About Us
+                      li
+                        a(href='about-2.html')
+                          div About Us - Layout 2
+                      li
+                        a(href='about-me.html')
+                          div About Me
+                      li
+                        a(href='team.html')
+                          div Team Members
+                      li
+                        a(href='jobs.html')
+                          div Careers
+                      li
+                        a(href='side-navigation.html')
+                          div Side Navigation
+                      li
+                        a(href='page-submenu.html')
+                          div Page Submenu
+                      li
+                        a(href='sitemap.html')
+                          div Sitemap
+                ul.mega-menu__column.col-lg-3
+                  li.mega-menu__title
+                    a(href='#')
+                      div Layout Grids
+                    ul
+                      li
+                        a(href='about.html')
+                          div About Us
+                      li
+                        a(href='about-2.html')
+                          div About Us - Layout 2
+                      li
+                        a(href='about-me.html')
+                          div About Me
+                      li
+                        a(href='team.html')
+                          div Team Members
+                      li
+                        a(href='jobs.html')
+                          div Careers
+                      li
+                        a(href='side-navigation.html')
+                          div Side Navigation
+                      li
+                        a(href='page-submenu.html')
+                          div Page Submenu
+                      li
+                        a(href='sitemap.html')
+                          div Sitemap
+                ul.mega-menu__column.col-lg-3
+                  li.mega-menu__title
+                    a(href='#')
+                      div Miscellaneous
+                    ul
+                      li
+                        a(href='about.html')
+                          div About Us
+                      li
+                        a(href='about-2.html')
+                          div About Us - Layout 2
+                      li
+                        a(href='about-me.html')
+                          div About Me
+                      li
+                        a(href='team.html')
+                          div Team Members
+                      li
+                        a(href='jobs.html')
+                          div Careers
+                      li
+                        a(href='side-navigation.html')
+                          div Side Navigation
+                      li
+                        a(href='page-submenu.html')
+                          div Page Submenu
+                      li
+                        a(href='sitemap.html')
+                          div Sitemap
+            li
+              a(href='#') Shop
+              ul(style={display:'none'})
+                li
+                  a(href='#')  - Corporate
+                  ul
+                    li
+                      a(href='#')
+                        Corporate - Layout 1
+                    li
+                      a(href='#')
+                        Corporate - Layout 2
+                    li
+                      a(href='#')
+                        Corporate - Layout 3
+                    li
+                      a(href='#')
+                        Corporate - Layout 4
+                li
+                  a(href="#") Home - Blog
+                li
+                  a(href="#") Home - Portfolio
+                li
+                  a(href='#') Home - Fullscreen
+                  ul
+                    li
+                      a(href='#') 
+                        Fullscreen - Layout 1
+                    li
+                      a(href='#')
+                        Fullscreen - Layout 2
+                    li
+                      a(href='#')
+                        Fullscreen - Layout 3
+                    li
+                      a(href='#')
+                        Fullscreen - Layout 4
+                li
+                  a(href="#") Home - Event
+                li
+                  a(href="#") Home - Wedding 
+                li
+                  a(href="#") Home - Party
+        #header-search
+          <i class="fas fa-search"></i>
+        #header-cart    
+          <i class="fas fa-shopping-cart"></i>
