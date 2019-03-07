@@ -1,0 +1,29 @@
+.footer-wrapper {
+    .copyrights {
+        background-color: $copyrights-color;
+    }
+    .copyrights__content {
+        padding: 40px 0;
+    }
+    .copyrights__info {
+        p {
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 0px;
+            color: rgba(255,255,255,.25);
+            text-shadow: 1px 1px 1px rgba(0,0,0,.1)
+        }
+        @media (max-width: $md-screen) {
+            text-align: center;
+        }
+    }
+    .copyrights__social {
+        text-align: right;
+        @media (max-width: $md-screen) {
+            display: none;
+        }
+    }
+    i,span {
+        margin-right: 10px;
+    }
+}

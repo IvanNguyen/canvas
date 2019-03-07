@@ -242,6 +242,35 @@ nav#header-menu ul li div.mega-menu__content ul li.mega-menu__title:hover > a {
             color: white;
             background: transparent;
         }
+.footer-wrapper .copyrights {
+        background-color: #292929;
+    }
+.footer-wrapper .copyrights__content {
+        padding: 40px 0;
+    }
+.footer-wrapper .copyrights__info p {
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 0px;
+            color: rgba(255, 255, 255, .25);
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, .1)
+        }
+@media (max-width: 768px) {
+	.footer-wrapper .copyrights__info {
+		text-align: center;
+	}
+}
+.footer-wrapper .copyrights__social {
+        text-align: right;
+}
+@media (max-width: 768px) {
+	.footer-wrapper .copyrights__social {
+		display: none;
+	}
+}
+.footer-wrapper i,.footer-wrapper span {
+        margin-right: 10px;
+}
 .slider-wrapper {
     position: relative;
 }
