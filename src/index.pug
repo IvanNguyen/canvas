@@ -1,5 +1,17 @@
 extends _templates/home_template.pug
 
 block page_content
-  //- p= "Home page content"
-  include ./_partials/slider.pug
+  main
+    include ./_partials/slider.pug
+    section#content
+      .content-wrapper
+        include ./_partials/wellcome.pug
+        include ./_partials/description-01.pug
+        include ./_partials/even-more.pug
+        include ./_partials/videos.pug
+        include ./_partials/number.pug
+        include ./_partials/list.pug
+        //- include ./_partials/gallery.pug
+        include ./_partials/device.pug
+        
+        

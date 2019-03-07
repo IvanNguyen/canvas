@@ -6,107 +6,105 @@ header
         i.fas.fa-align-justify
       //- logo
       #logo
-        a(class="black-logo" href="index.html")
-          img(src="assets/img/black-logo.png", alt="black-logo")
         a(class="white-logo" href="index.html")
           img(src="assets/img/white-logo.png", alt="white-logo")  
       //- header-menu
       .nav-wrapper
         nav#header-menu
           ul
-            li
+            li.sub-menu
               a(href='#') Home
-              ul(style={display:'none'})
-                li
+              ul.sub-menu__content
+                li.has-sub-menu
                   a(href='#') Home - Corporate
-                  ul
+                  ul.sub-menu__content
                     li
                       a(href='#')
-                        Corporate - Layout 1
+                        |  Corporate - Layout 1
                     li
                       a(href='#')
-                        Corporate - Layout 2
+                        |  Corporate - Layout 2
                     li
                       a(href='#')
-                        Corporate - Layout 3
+                        |  Corporate - Layout 3
                     li
                       a(href='#')
-                        Corporate - Layout 4
+                        |  Corporate - Layout 4
                 li
                   a(href="#") Home - Blog
                 li
                   a(href="#") Home - Portfolio
-                li
+                li.has-sub-menu
                   a(href='#') Home - Fullscreen
-                  ul
+                  ul.sub-menu__content
                     li
                       a(href='#') 
-                        Fullscreen - Layout 1
+                        |  Fullscreen - Layout 1
                     li
                       a(href='#')
-                        Fullscreen - Layout 2
+                        |  Fullscreen - Layout 2
                     li
                       a(href='#')
-                        Fullscreen - Layout 3
+                        |  Fullscreen - Layout 3
                     li
                       a(href='#')
-                        Fullscreen - Layout 4
+                        |  Fullscreen - Layout 4
                 li
                   a(href="#") Home - Event
                 li
                   a(href="#") Home - Wedding 
                 li
                   a(href="#") Home - Party
-            li
+            li.sub-menu
               a(href='#') Features
-              ul(style={display:'none'})
-                li
+              ul.sub-menu__content
+                li.has-sub-menu
                   a(href='#') Home - Corporate
-                  ul
+                  ul.sub-menu__content
                     li
                       a(href='#')
-                        Corporate - Layout 1
+                        |  Corporate - Layout 1
                     li
                       a(href='#')
-                        Corporate - Layout 2
+                        |  Corporate - Layout 2
                     li
                       a(href='#')
-                        Corporate - Layout 3
+                        |  Corporate - Layout 3
                     li
                       a(href='#')
-                        Corporate - Layout 4
+                        |  Corporate - Layout 4
                 li
                   a(href="#") Home - Blog
                 li
                   a(href="#") Home - Portfolio
-                li
+                li.has-sub-menu
                   a(href='#') Home - Fullscreen
-                  ul
+                  ul.sub-menu__content
                     li
                       a(href='#') 
-                        Fullscreen - Layout 1
+                        |  Fullscreen - Layout 1
+                    li.has-sub-menu
+                      a(href='#')
+                        |  Fullscreen - Layout 2
+                      ul.sub-menu__content
+                        li
+                          a(href='#')
+                            |  Corporate - Layout 2.1
+                        li
+                          a(href='#')
+                            |  Corporate - Layout 2.2
+                        li
+                          a(href='#')
+                            |  Corporate - Layout 2.3
+                        li
+                          a(href='#')
+                            |  Corporate - Layout 2.4
                     li
                       a(href='#')
-                        Fullscreen - Layout 2
-                      ul
-                        li
-                          a(href='#')
-                            Corporate - Layout 2.1
-                        li
-                          a(href='#')
-                            Corporate - Layout 2.2
-                        li
-                          a(href='#')
-                            Corporate - Layout 2.3
-                        li
-                          a(href='#')
-                            Corporate - Layout 2.4
+                        |  Fullscreen - Layout 3
                     li
                       a(href='#')
-                        Fullscreen - Layout 3
-                    li
-                      a(href='#')
-                        Fullscreen - Layout 4
+                        |  Fullscreen - Layout 4
                 li
                   a(href="#") Home - Event
                 li
@@ -115,41 +113,41 @@ header
                   a(href="#") Home - Party
             li.mega-menu
               a(href="#") Pages
-              .mega-menu__content(style={display:'none'})
+              .mega-menu__content
                 ul.mega-menu__column.col-lg-3
                   li.mega-menu__title
                     a(href='#')
-                      div Introduction
-                    ul
+                      | Introduction
+                    ul.mega-menu__dropdown
                       li
                         a(href='about.html')
-                          div About Us
+                          | About Us
                       li
                         a(href='about-2.html')
-                          div About Us - Layout 2
+                          | About Us - Layout 2
                       li
                         a(href='about-me.html')
-                          div About Me
+                          | About Me
                       li
                         a(href='team.html')
-                          div Team Members
+                          | Team Members
                       li
                         a(href='jobs.html')
-                          div Careers
+                          | Careers
                       li
                         a(href='side-navigation.html')
-                          div Side Navigation
+                          | Side Navigation
                       li
                         a(href='page-submenu.html')
-                          div Page Submenu
+                          | Page Submenu
                       li
                         a(href='sitemap.html')
-                          div Sitemap
+                          | Sitemap
                 ul.mega-menu__column.col-lg-3
                   li.mega-menu__title
                     a(href='#')
                       div Utility
-                    ul
+                    ul.mega-menu__dropdown
                       li
                         a(href='about.html')
                           div About Us
@@ -178,7 +176,7 @@ header
                   li.mega-menu__title
                     a(href='#')
                       div Layout Grids
-                    ul
+                    ul.mega-menu__dropdown
                       li
                         a(href='about.html')
                           div About Us
@@ -207,7 +205,7 @@ header
                   li.mega-menu__title
                     a(href='#')
                       div Miscellaneous
-                    ul
+                    ul.mega-menu__dropdown
                       li
                         a(href='about.html')
                           div About Us
@@ -234,41 +232,41 @@ header
                           div Sitemap
             li.mega-menu
               a(href="#") Portfolio
-              .mega-menu__content(style={display:'none'})
+              .mega-menu__content
                 ul.mega-menu__column.col-lg-3
                   li.mega-menu__title
                     a(href='#')
-                      div Introduction
-                    ul
+                      | Introduction
+                    ul.mega-menu__dropdown
                       li
                         a(href='about.html')
-                          div About Us
+                          | About Us
                       li
                         a(href='about-2.html')
-                          div About Us - Layout 2
+                          | About Us - Layout 2
                       li
                         a(href='about-me.html')
-                          div About Me
+                          | About Me
                       li
                         a(href='team.html')
-                          div Team Members
+                          | Team Members
                       li
                         a(href='jobs.html')
-                          div Careers
+                          | Careers
                       li
                         a(href='side-navigation.html')
-                          div Side Navigation
+                          | Side Navigation
                       li
                         a(href='page-submenu.html')
-                          div Page Submenu
+                          | Page Submenu
                       li
                         a(href='sitemap.html')
-                          div Sitemap
+                          | Sitemap
                 ul.mega-menu__column.col-lg-3
                   li.mega-menu__title
                     a(href='#')
                       div Utility
-                    ul
+                    ul.mega-menu__dropdown
                       li
                         a(href='about.html')
                           div About Us
@@ -297,7 +295,7 @@ header
                   li.mega-menu__title
                     a(href='#')
                       div Layout Grids
-                    ul
+                    ul.mega-menu__dropdown
                       li
                         a(href='about.html')
                           div About Us
@@ -326,7 +324,7 @@ header
                   li.mega-menu__title
                     a(href='#')
                       div Miscellaneous
-                    ul
+                    ul.mega-menu__dropdown
                       li
                         a(href='about.html')
                           div About Us
@@ -353,41 +351,41 @@ header
                           div Sitemap
             li.mega-menu
               a(href="#") Blog
-              .mega-menu__content(style={display:'none'})
+              .mega-menu__content
                 ul.mega-menu__column.col-lg-3
                   li.mega-menu__title
                     a(href='#')
-                      div Introduction
-                    ul
+                      | Introduction
+                    ul.mega-menu__dropdown
                       li
                         a(href='about.html')
-                          div About Us
+                          | About Us
                       li
                         a(href='about-2.html')
-                          div About Us - Layout 2
+                          | About Us - Layout 2
                       li
                         a(href='about-me.html')
-                          div About Me
+                          | About Me
                       li
                         a(href='team.html')
-                          div Team Members
+                          | Team Members
                       li
                         a(href='jobs.html')
-                          div Careers
+                          | Careers
                       li
                         a(href='side-navigation.html')
-                          div Side Navigation
+                          | Side Navigation
                       li
                         a(href='page-submenu.html')
-                          div Page Submenu
+                          | Page Submenu
                       li
                         a(href='sitemap.html')
-                          div Sitemap
+                          | Sitemap
                 ul.mega-menu__column.col-lg-3
                   li.mega-menu__title
                     a(href='#')
                       div Utility
-                    ul
+                    ul.mega-menu__dropdown
                       li
                         a(href='about.html')
                           div About Us
@@ -416,7 +414,7 @@ header
                   li.mega-menu__title
                     a(href='#')
                       div Layout Grids
-                    ul
+                    ul.mega-menu__dropdown
                       li
                         a(href='about.html')
                           div About Us
@@ -445,7 +443,111 @@ header
                   li.mega-menu__title
                     a(href='#')
                       div Miscellaneous
-                    ul
+                    ul.mega-menu__dropdown
+                      li
+                        a(href='about.html')
+                          div About Us
+                      li
+                        a(href='about-2.html')
+                          div About Us - Layout 2
+                      li
+                        a(href='about-me.html')
+                          div About Me
+                      li
+                        a(href='team.html')
+                          div Team Members
+                      li
+                        a(href='jobs.html')
+                          div Careers
+                      li
+                        a(href='side-navigation.html')
+                          div Side Navigation
+                      li
+                        a(href='page-submenu.html')
+                          div Page Submenu
+                      li
+                        a(href='sitemap.html')
+                          div Sitemap 
+            li.sub-menu
+              a(href='#') Shop
+              ul.sub-menu__content
+                li.has-sub-menu
+                  a(href='#') Corporate
+                  ul.sub-menu__content.sub-menu__content_left
+                    li
+                      a(href='#')
+                        |  Corporate - Layout 1
+                    li
+                      a(href='#')
+                        |  Corporate - Layout 2
+                    li
+                      a(href='#')
+                        |  Corporate - Layout 3
+                    li
+                      a(href='#')
+                        |  Corporate - Layout 4
+                li
+                  a(href="#") Home - Blog
+                li
+                  a(href="#") Home - Portfolio
+                li.has-sub-menu
+                  a(href='#') Home - Fullscreen
+                  ul.sub-menu__content.sub-menu__content_left
+                    li
+                      a(href='#') 
+                        |  Fullscreen - Layout 1
+                    li
+                      a(href='#')
+                        |  Fullscreen - Layout 2
+                    li
+                      a(href='#')
+                        |  Fullscreen - Layout 3
+                    li
+                      a(href='#')
+                        |  Fullscreen - Layout 4
+                li
+                  a(href="#") Home - Event
+                li
+                  a(href="#") Home - Wedding 
+                li
+                  a(href="#") Home - Party
+            li.mega-menu
+              a(href="#") Shortcodes
+              .mega-menu__content
+                ul.mega-menu__column.col-lg-3
+                  li.mega-menu__title
+                    a(href='#')
+                      | Introduction
+                    ul.mega-menu__dropdown
+                      li
+                        a(href='about.html')
+                          | About Us
+                      li
+                        a(href='about-2.html')
+                          | About Us - Layout 2
+                      li
+                        a(href='about-me.html')
+                          | About Me
+                      li
+                        a(href='team.html')
+                          | Team Members
+                      li
+                        a(href='jobs.html')
+                          | Careers
+                      li
+                        a(href='side-navigation.html')
+                          | Side Navigation
+                      li
+                        a(href='page-submenu.html')
+                          | Page Submenu
+                      li
+                        a(href='sitemap.html')
+                          | Sitemap
+                ul.mega-menu__column.col-lg-3
+                  li.mega-menu__title
+                    a(href='#')
+                      div Utility
+                    ul.mega-menu__dropdown
                       li
                         a(href='about.html')
                           div About Us
@@ -470,49 +572,65 @@ header
                       li
                         a(href='sitemap.html')
                           div Sitemap
-            li
-              a(href='#') Shop
-              ul(style={display:'none'})
-                li
-                  a(href='#')  - Corporate
-                  ul
-                    li
-                      a(href='#')
-                        Corporate - Layout 1
-                    li
-                      a(href='#')
-                        Corporate - Layout 2
-                    li
-                      a(href='#')
-                        Corporate - Layout 3
-                    li
-                      a(href='#')
-                        Corporate - Layout 4
-                li
-                  a(href="#") Home - Blog
-                li
-                  a(href="#") Home - Portfolio
-                li
-                  a(href='#') Home - Fullscreen
-                  ul
-                    li
-                      a(href='#') 
-                        Fullscreen - Layout 1
-                    li
-                      a(href='#')
-                        Fullscreen - Layout 2
-                    li
-                      a(href='#')
-                        Fullscreen - Layout 3
-                    li
-                      a(href='#')
-                        Fullscreen - Layout 4
-                li
-                  a(href="#") Home - Event
-                li
-                  a(href="#") Home - Wedding 
-                li
-                  a(href="#") Home - Party
+                ul.mega-menu__column.col-lg-3
+                  li.mega-menu__title
+                    a(href='#')
+                      div Layout Grids
+                    ul.mega-menu__dropdown
+                      li
+                        a(href='about.html')
+                          div About Us
+                      li
+                        a(href='about-2.html')
+                          div About Us - Layout 2
+                      li
+                        a(href='about-me.html')
+                          div About Me
+                      li
+                        a(href='team.html')
+                          div Team Members
+                      li
+                        a(href='jobs.html')
+                          div Careers
+                      li
+                        a(href='side-navigation.html')
+                          div Side Navigation
+                      li
+                        a(href='page-submenu.html')
+                          div Page Submenu
+                      li
+                        a(href='sitemap.html')
+                          div Sitemap
+                ul.mega-menu__column.col-lg-3
+                  li.mega-menu__title
+                    a(href='#')
+                      div Miscellaneous
+                    ul.mega-menu__dropdown
+                      li
+                        a(href='about.html')
+                          div About Us
+                      li
+                        a(href='about-2.html')
+                          div About Us - Layout 2
+                      li
+                        a(href='about-me.html')
+                          div About Me
+                      li
+                        a(href='team.html')
+                          div Team Members
+                      li
+                        a(href='jobs.html')
+                          div Careers
+                      li
+                        a(href='side-navigation.html')
+                          div Side Navigation
+                      li
+                        a(href='page-submenu.html')
+                          div Page Submenu
+                      li
+                        a(href='sitemap.html')
+                          div Sitemap
+            
         #header-search
           <i class="fas fa-search"></i>
         #header-cart    
