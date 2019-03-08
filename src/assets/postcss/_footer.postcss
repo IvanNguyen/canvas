@@ -1,4 +1,7 @@
 .footer-wrapper {
+    /* Copyrights Style */
+    background-color: $footer-color;
+    padding-top: 80px;
     .copyrights {
         background-color: $copyrights-color;
     }
@@ -24,6 +27,96 @@
         }
     }
     i,span {
-        margin-right: 10px;
+        margin-right: 15px;
+    }
+    /* Footer-info Styles */
+    .footer__info {
+        font-size: 14px;
+        padding-bottom: 30px;
+        color: $footer-text-color;
+    }
+    .footer__contact {
+        background:  url('../img/world-map.png') no-repeat center center;
+        background-size: 100%;
+    }
+    .footer__logo {
+        display: block;
+        margin-bottom: 45px;
+    }
+    .footer__info {  
+        span {
+            margin-left: 10px;
+        }
+        
+    }
+    h4 {
+        color: #ddd;
+    }
+    ul li {
+        margin-bottom: 10px;
+    }
+    p.date {
+        font-family: crete round,serif;
+        font-size: 13px;
+        margin: -5px 10px 15px 0;
+        font-style: italic;
+        color: #888;
+    }
+    .total-downloads {
+        span {
+            text-shadow: 1px 1px 1px rgba(0,0,0,.1);
+            font-size: 28px;
+            font-weight: 600;
+            font-family: Raleway,sans-serif;
+            color: #ccc;
+        }
+        h5 {
+            opacity: .7;
+            font-size: 13px;
+            color: #eee;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 10px;
+        }
+    }
+    .subscribe-form {
+        margin-bottom: 40px;
+    }
+    h5.subscribe-text {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #eee;
+    }
+    .footer__social {
+        color: #fff;
+        &-icon {
+            flex-shrink: 0;
+            margin: 0 5px 5px 0;
+            width: 40px;
+            height: 40px;
+            text-shadow: none;
+            border: 1px solid;
+            border-radius: 2px;
+            i {
+                display: block;
+                text-align: center;
+                font-size: 35px;
+                margin: 0 auto;
+                padding: 0;
+                
+            }
+        }
+        
+    }
+    .mb-10 {
+            margin-bottom: 10px;
+        }
+    .icon-face-book {
+        background-color: #3b5998!important;
+    }
+    .icon-srr {
+        background-color: #ee802f!important;
     }
 }
