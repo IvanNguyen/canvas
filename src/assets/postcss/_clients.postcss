@@ -1,11 +1,9 @@
 .clients {
-    height: 580px;
     background: url('../img/clients-background.jpg') center center no-repeat;
     background-size: cover;
 }
 .clients-wrapper {
     padding: 100px 0;
-    height: 100%;
     .block-heading {
         margin-bottom: 50px;
         h3 {
@@ -27,15 +25,21 @@
     }
 }
 .clients__slider {
-    height: 60%;
 }
 .clients__slider-item {
+    height: 250px;
     text-align: center;
     img {
         display: block;
         margin: 0 auto;
         border-radius: 50%;
         margin-bottom: 20px;
+    }
+    @media (max-width: 770px){
+        height: 280px;
+    }
+    @media (max-width: 510px){
+        height: 360px;
     }
 }
 p.clients__item-heading {

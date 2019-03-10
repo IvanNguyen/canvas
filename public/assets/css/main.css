@@ -19,6 +19,36 @@ h1,h2,h3,h4,h5,h6 {
 #content p {
     line-height: 1.8;
 }
+#button {
+  display: inline-block;
+  background-color: rgba(0, 0, 0, .3);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  font-size: 20px;
+  line-height: 40px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #31BD9C;
+}
+#button:active {
+  background-color: #31BD9C;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
 .header-wrapper {
     position: fixed;
     right:0;
@@ -79,6 +109,9 @@ h1,h2,h3,h4,h5,h6 {
 	#logo {
 		border-right: none;
 	}
+}
+#logo img {
+        transition: all 0.3s ease;
 }
 .nav-wrapper {
     display: -webkit-box;
@@ -172,6 +205,7 @@ nav#header-menu ul ul li:hover>a {
 #header-search, #header-cart {
     margin: 40px 0 40px 15px;
     color: #eee;
+    transition: all 0.3s ease;
 }
 @media (max-width: 992px) {
 	#header-search, #header-cart {
@@ -242,6 +276,18 @@ nav#header-menu ul li div.mega-menu__content ul li.mega-menu__title:hover > a {
             color: white;
             background: transparent;
         }
+.background-color-scroll {
+    background-color: white!important;
+    color: black;
+}
+.a-color-scroll {
+    color: #444!important;
+    padding: 19px 15px !important;
+}
+.header-icon-scroll {
+    margin: 20px 0 20px 15px !important;
+    color: #444 !important;
+}
 .footer-wrapper {
     /* Copyrights Style */
     background-color: #333;
@@ -4178,7 +4224,45 @@ nav#header-menu ul li div.mega-menu__content ul li.mega-menu__title:hover > a {
         color: #666!important;
         border-radius: 50%;
         margin-bottom: 20px;
+        transition: all 0.3s ease;
     }
+.team-wrapper a.social-icon i {
+            transition: all 0.3s ease;
+        }
+.team-wrapper a.social-icon:hover > i.fa-facebook-f {
+	color: white;
+}
+.team-wrapper a.social-icon:hover.facebook-f {
+	background-color: #4767B0;
+}
+.team-wrapper a.social-icon:hover > i.fa-twitter {
+	color: #35A1F0;
+}
+.team-wrapper a.social-icon:hover.twitter {
+	background-color: white;
+}
+.team-wrapper a.social-icon:hover > i.fa-google-plus-g {
+	color: #CF4338;
+}
+.team-wrapper a.social-icon:hover.google-plus-g {
+	background-color: white;
+}
+ul.slick-dots {
+    text-align: center;
+    margin-top: 10px;
+}
+ul.slick-dots > li {
+    display: inline-block;
+    opacity: 0.75;
+    padding: 5px;
+}
+ul.slick-dots > li > i {
+        font-size: 10px;
+    }
+.slick-active {
+    opacity: 1!important;
+    color: white!important;
+}
 .brands-wrapper {
     height: 150px;
     margin-top: 80px;
@@ -4196,13 +4280,11 @@ nav#header-menu ul li div.mega-menu__content ul li.mega-menu__title:hover > a {
         height: auto;
     }
 .clients {
-    height: 580px;
     background: url('../img/clients-background.jpg') center center no-repeat;
     background-size: cover;
 }
 .clients-wrapper {
     padding: 100px 0;
-    height: 100%;
 }
 .clients-wrapper .block-heading {
         margin-bottom: 50px;   
@@ -4224,9 +4306,9 @@ nav#header-menu ul li div.mega-menu__content ul li.mega-menu__title:hover > a {
 	border-top: 2px solid #444;
 }
 .clients__slider {
-    height: 60%;
 }
 .clients__slider-item {
+    height: 250px;
     text-align: center;
 }
 .clients__slider-item img {
@@ -4235,6 +4317,16 @@ nav#header-menu ul li div.mega-menu__content ul li.mega-menu__title:hover > a {
         border-radius: 50%;
         margin-bottom: 20px;
     }
+@media (max-width: 770px) {
+	.clients__slider-item {
+		height: 280px;
+	}
+}
+@media (max-width: 510px) {
+	.clients__slider-item {
+		height: 360px;
+	}
+}
 p.clients__item-heading {
     width: 80%;
     margin: 0 auto;

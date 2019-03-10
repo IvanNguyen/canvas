@@ -46,6 +46,9 @@
     @media (max-width: $lg-screen){
         border-right: none;
     }
+    img {
+        transition: all 0.3s ease;
+    }
 }
 .nav-wrapper {
     display: flex;
@@ -135,6 +138,7 @@ nav#header-menu {
 #header-search, #header-cart {
     margin: 40px 0 40px 15px;
     color: $lg-menu-heading-text-color;
+    transition: all 0.3s ease;
     @media (max-width: $lg-screen){
         color: $md-menu-heading-text-color;
     }
@@ -202,4 +206,16 @@ nav#header-menu {
             background: transparent;
         }
     }
+}
+.background-color-scroll {
+    background-color: white!important;
+    color: black;
+}
+.a-color-scroll {
+    color: #444!important;
+    padding: 19px 15px !important;
+}
+.header-icon-scroll {
+    margin: 20px 0 20px 15px !important;
+    color: #444 !important;
 }

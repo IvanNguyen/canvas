@@ -21,3 +21,33 @@ h1,h2,h3,h4,h5,h6 {
 #content p {
     line-height: 1.8;
 }
+#button {
+  display: inline-block;
+  background-color: rgba(0,0,0,.3);
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  font-size: 20px;
+  line-height: 40px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #31BD9C;
+}
+#button:active {
+  background-color: #31BD9C;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
