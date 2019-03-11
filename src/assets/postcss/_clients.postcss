@@ -25,10 +25,15 @@
     }
 }
 .clients__slider {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 .clients__slider-item {
     height: 250px;
     text-align: center;
+    display: flex!important;
+    flex-direction: column;
+    justify-content: center;
     img {
         display: block;
         margin: 0 auto;
@@ -53,6 +58,9 @@ p.clients__item-heading {
 .clients__item_author {
     margin-top: 15px;
     font-size: 14px;
+    p {
+        margin-bottom: 0;
+    }
     .author-name{
         color: #eee;
         font-weight: 700;
@@ -64,4 +72,20 @@ p.clients__item-heading {
         color: #999;
         text-transform: none;
     }
+}
+ul.slick-dots {
+    text-align: center;
+    /* margin-top: 10px; */
+}
+ul.slick-dots > li {
+    display: inline-block;
+    opacity: 0.75;
+    padding: 5px;
+    > i {
+        font-size: 10px;
+    }
+}
+.slick-active {
+    opacity: 1!important;
+    color: white!important;
 }

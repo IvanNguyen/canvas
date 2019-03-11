@@ -1,5 +1,8 @@
 .videos-wrapper {
     background-color: $background-color-2;
+    .container {
+        height: 0;
+    }
     .image {
         text-align: center;
         padding: 60px;
@@ -41,7 +44,8 @@
             font-weight: 300;
         }
         img.videos__background {
-                width: 100%;
+                /* width: 100%; */
+                max-width: 100%;
                 height: auto;
             }
         img.videos__play-button {
@@ -53,4 +57,28 @@
             transform: translate(-50%, -50%);
         }
     }
+}
+/* Video-modal styles */
+.modal-dialog {
+      max-width: 800px;
+      margin: 30px auto;
+  }
+
+.modal-body {
+  position:relative;
+  padding:0px;
+}
+.close {
+  position:absolute;
+  right:-30px;
+  top:0;
+  z-index:999;
+  font-size:2rem;
+  font-weight: normal;
+  color:#fff;
+  opacity:1;
+}
+.modal-content {
+    width: 80%!important;
+    margin: 300 auto !important;
 }

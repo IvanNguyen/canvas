@@ -128,7 +128,7 @@ gulp.task('build', ['clean'], function () {
 gulp.task('serve', ['build', 'browser-sync'], function () {
   gulp.watch(dist + '/*.html').on('change', reload);
   gulp.watch(config.cssDest + '/*.css').on('change', reload);
-  gulp.watch(config.jsPathSrc + '/*.js').on('change', reload);
+  gulp.watch(config.jsPathSrc + '/*.js', ['scripts']).on('change', reload);
   gulp.watch(src + '/**/*.pug', ['pug']).on('change', reload);
   gulp.watch(config.postcssPath + '/**/*.postcss', ['postcss']).on('change', reload);
 });

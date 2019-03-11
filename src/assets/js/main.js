@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    // Brands-slider
     $('.auto-slider').slick({
         arrows: false,
         slidesToShow: 5,
@@ -28,7 +29,7 @@ $(document).ready(function () {
             // instead of a settings object
         ]
     });
-
+    // Clients-slider
     $('.clients__slider').slick({
         dots: true,
         customPaging: function (slider, i) {
@@ -42,6 +43,7 @@ $(document).ready(function () {
         slidesToScroll: 1,
     });
 
+    // Back-to-top
     var btn = $('#button');
 
     $(window).scroll(function () {
@@ -59,7 +61,7 @@ $(document).ready(function () {
         }, '300');
     });
 
-    
+    // Header-scroll
     $(window).scroll(function () {
         var windowsize = $(window).width();
     if ($(window).scrollTop() > 0 && windowsize > 992 ) {
@@ -79,4 +81,30 @@ $(document).ready(function () {
         }
     });
 
+    // Videos-modal
+
+    // Gets the video src from the data-src on each button
+
+    var $videoSrc;
+    $('.video-btn').click(function () {
+        $videoSrc = $(this).data("src");
+    });
+    console.log($videoSrc);
+
+    // when the modal is opened autoplay it  
+    $('#myModal').on('shown.bs.modal', function (e) {
+
+        // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+        $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
+    })
+    // Toggle header-menu
+    $("#menu-trigger-button").click(function () {
+        $("#header-menu").slideToggle("fast");
+    });
+    
+    // Slider-text-effect
+    $(window).on('load', function () {
+        $('.slider__caption h2').addClass('animated fadeInUp'); 
+        $('.slider__caption p').addClass('animated fadeInUp delay-1s'); 
+    });
 });

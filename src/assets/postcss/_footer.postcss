@@ -30,10 +30,24 @@
         margin-right: 15px;
     }
     /* Footer-info Styles */
+    .row .col-md-3 > p {
+        opacity: 0.8;
+        margin-bottom: 30px;
+    }
+    .footer__contact-address {
+        margin-bottom: 30px;
+    }
+    .footer__contact-info p {
+        margin-bottom: 0px;
+        font-size: 13px;
+    }
     .footer__info {
         font-size: 14px;
-        padding-bottom: 30px;
+        padding-bottom: 80px;
         color: $footer-text-color;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     .footer__contact {
         background:  url('../img/world-map.png') no-repeat center center;
@@ -51,6 +65,11 @@
     }
     h4 {
         color: #ddd;
+        margin-bottom: 25px;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
     }
     ul li {
         margin-bottom: 10px;
@@ -58,7 +77,7 @@
     p.date {
         font-family: crete round,serif;
         font-size: 13px;
-        margin: -5px 10px 15px 0;
+        margin: -5px 10px 20px 0;
         font-style: italic;
         color: #888;
     }
@@ -87,10 +106,22 @@
         font-weight: 300;
         font-size: 14px;
         line-height: 1.5;
+        margin-top: 50px;
         color: #eee;
+    }
+    .post:not(.post_first) {
+        border-top: 1px dashed;
+        border-top-color: rgba(255,255,255,.1);
+        padding-top: 20px;
+    }
+    .post p {
+        font-weight: 600;
     }
     .footer__social {
         color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         &-icon {
             flex-shrink: 0;
             margin: 0 5px 5px 0;
