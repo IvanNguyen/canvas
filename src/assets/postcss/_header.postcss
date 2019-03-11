@@ -93,7 +93,7 @@ nav#header-menu {
                 visibility: visible;
                 opacity: 1;
                 @media (max-width: $lg-screen){
-                    display: block;
+                    /* display: block; */
                 }
             }
             > a {
@@ -107,14 +107,19 @@ nav#header-menu {
                 letter-spacing: 1px;
                 text-transform: uppercase;
                 transition: margin .4s ease,padding .4s ease;
-                 @media (max-width: $lg-screen){
+                @media (max-width: $lg-screen){
                     padding: 14px 5px !important;
                     text-shadow: 1px 1px 1px rgba(0,0,0,.1);
-                    background-image: url('../img/submenu.png');
-                    background-position: right center;
-                    background-repeat: no-repeat;
+                    /* width: 170px; */
                 }
             }
+        }
+    }
+    > ul > li  {
+        @media (max-width: $lg-screen){
+            background-image: url('../img/submenu.png');
+            background-position: right center;
+            background-repeat: no-repeat;
         }
     }
     ul ul li {
@@ -157,6 +162,8 @@ nav#header-menu {
             transition: all .4s ease;
             @media (max-width: $lg-screen){
                 display: none;
+                visibility: visible;
+                opacity: 1;
             }           
         }
         ul:not(.mega-menu__dropdown) {
@@ -206,6 +213,8 @@ nav#header-menu {
         transition: all .5s ease;
         @media (max-width: $lg-screen){
             display: none;
+            visibility: visible;
+            opacity: 1;
             position: static;
             width: 100%;
             border: 0;

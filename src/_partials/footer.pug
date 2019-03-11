@@ -2,7 +2,7 @@ footer
   .footer-wrapper
     .container.footer__info
       .row
-        .col-md-3.col-sm-12
+        .mod-col.col-md-3.col-sm-12
           img.footer__logo(src="../assets/img/footer-widget-logo.png", alt="footer-logo")
           p We believe in Simple Creative Flexible  Design Standards.
           .footer__contact
@@ -22,7 +22,7 @@ footer
               p    
                 strong Email:
                   span kydat.nguyen@gmail.com
-        .col-md-2.col-sm-12
+        .mod-col.col-md-2.col-sm-12
           h4 Blogroll
           ul
             li Document
@@ -32,7 +32,7 @@ footer
             li Themes
             li Worldpress Blog
             li Facebook
-        .col-md-3.col-sm-12
+        .mod-col.col-md-3.col-sm-12
           h4 Recent posts
           .post.post_first
             p Lorem ipsum dolor sit amet, consectetur
@@ -43,7 +43,7 @@ footer
           .post
             p Debitis nihil placeat, illum est nisi
             p.date 10th July 2014
-        .col-md-4.col-sm-12
+        .mod-col.col-md-4.col-sm-12
           .row.total-downloads
             .col-lg-6.col-md-12.col-sm-12
               span 15,065,421
@@ -54,19 +54,19 @@ footer
           h5.subscribe-text Subscribe to Our Newsletter to get Important News, Amazing Offers & Inside Scoops:
           .subscribe-form
             form.form-inline
-              input.form-control.mb-10(type='text', placeholder='Enter your email')
-              button.btn.btn-success.mb-10(type='submit') Subscribe
+              input.form-control(type='text', placeholder='Enter your email')
+              button.btn.btn-success(type='submit') Subscribe
           .footer__social.row
-            .col-md-6.col-sm-12.d-flex.mb-10
+            .col-lg-6.d-flex.mb-30
               .footer__social-icon.icon-face-book
                 i.fab.fa-facebook-f
-              span Like us
+              small Like us
                 br 
                 | on Facebook
-            .col-md-6.col-sm-12.d-flex.mb-10
+            .col-lg-6.d-flex.mb-30
               .footer__social-icon.icon-srr
                 i.fas.fa-rss
-              span Subscribe
+              small Subscribe
                 br 
                 | to SRR Feeds
     .copyrights
@@ -76,7 +76,7 @@ footer
             .col-md-6.copyrights__info
               p 
                 | Copyrights © 2014 All Rights Reserved by Canvas Inc.
-              p
+              span
                 | Terms of Use / Privacy Policy
             .col-md-6.copyrights__social
               .copyrights__social-icon

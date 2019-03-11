@@ -97,7 +97,7 @@ $(document).ready(function () {
         // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
         $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
     })
-    // Toggle header-menu
+    // Toggle header-menu-lg
     $("#menu-trigger-button").click(function () {
         $("#header-menu").slideToggle("fast");
     });
@@ -106,5 +106,12 @@ $(document).ready(function () {
     $(window).on('load', function () {
         $('.slider__caption h2').addClass('animated fadeInUp'); 
         $('.slider__caption p').addClass('animated fadeInUp delay-1s'); 
+    });
+    // Toogle slide header-menu-md
+    $(".sub-menu-1").click(function () {
+        $(".sub-menu-1__content").slideToggle("1000");
+    });
+    $(".mega-menu-1").click(function () {
+        $(".mega-menu-1__content").slideToggle("slow");
     });
 });
