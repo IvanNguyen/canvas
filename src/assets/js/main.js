@@ -108,10 +108,14 @@ $(document).ready(function () {
         $('.slider__caption p').addClass('animated fadeInUp delay-1s'); 
     });
     // Toogle slide header-menu-md
-    $(".sub-menu-1").click(function () {
+    $(".sub-menu-1").click(function (event) {
+        event.stopPropagation();
         $(".sub-menu-1__content").slideToggle("1000");
+        // event.stopPropagation();
     });
-    $(".mega-menu-1").click(function () {
+    $(".mega-menu-1").click(function (event) {
+        // event.stopPropagation();
         $(".mega-menu-1__content").slideToggle("slow");
+        // event.stopPropagation();
     });
 });

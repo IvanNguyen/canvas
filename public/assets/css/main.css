@@ -4306,6 +4306,9 @@ nav#header-menu ul li div.mega-menu__content ul li.mega-menu__title:hover > a {
     width: 70%!important;
     margin: 50px auto !important;
 }
+.btn:focus {
+    box-shadow: none!important;
+}
 .number-wrapper .mod-column {
         padding: 60px;
         text-align: center;
